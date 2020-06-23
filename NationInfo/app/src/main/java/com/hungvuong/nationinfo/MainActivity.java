@@ -1,6 +1,7 @@
 package com.hungvuong.nationinfo;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -39,6 +40,16 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     lvNation=findViewById(R.id.listViewNation);
+    final SwipeRefreshLayout pullToRefresh = findViewById(R.id.pullToRefresh);
+    pullToRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+      @Override
+      public void onRefresh() {
+        finish();
+        startActivity(getIntent());
+        pullToRefresh.setRefreshing(true);
+      }
+    });//vuốt xuống để reload
+    
     arrayListNation=new ArrayList<>();
     arrayListNationName=new ArrayList<>();
     ReadJSON(urlNation);
@@ -117,6 +128,7 @@ public class MainActivity extends AppCompatActivity {
               @Override
               public void onErrorResponse(VolleyError error) {
                 checkInternetConnection();
+                progressDialog.dismiss();
   
               }
             });

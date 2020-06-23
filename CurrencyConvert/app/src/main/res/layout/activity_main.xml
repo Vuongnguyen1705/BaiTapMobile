@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/pullToRefresh"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:orientation="vertical">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_margin="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đổi Tiền"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="#188DC7"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+        
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:defaultFocusHighlightEnabled="true"
+                android:id="@+id/spinnerTienNguon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                />
+        
+            <ImageButton
+                android:background="@null"
+                android:id="@+id/imageButtonConvert"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:scaleType="centerCrop"
+                android:layout_weight="0.3"
+                app:srcCompat="@drawable/convert" />
+            
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/spinnerTienDich"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+            
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:id="@+id/textInputLayoutTienNguon">
+            
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditTextTienNguon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tiền Nguồn"
+                    android:textColor="#188DC7"
+                    android:inputType="numberDecimal"
+                    android:textSize="24sp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:id="@+id/textInputLayoutTienDich">
+            
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditTextTienDich"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tiền Đích"
+                    android:editable="true"
+                    android:inputType="numberDecimal"
+                    android:textSize="24sp"
+                    android:textColor="#64AF45"
+                    tools:ignore="Deprecated" />
+        
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        
+        <Button
+            android:id="@+id/buttonConvert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Convert"
+            android:textColor="#fff"
+            android:layout_gravity="center"
+            android:background="@drawable/button_custom"/>
+    
+        <TextView
+            android:id="@+id/textViewLoi"
+            android:layout_marginTop="50dp"
+            android:textColor="#FF0000"
+            android:textSize="24sp"
+            
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        
+    </LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

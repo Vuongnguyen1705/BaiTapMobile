@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+        <LinearLayout
+            android:id="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:adjustViewBounds="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/banhmi" />
+        </LinearLayout>
+    
+        <LinearLayout
+            android:id="@+id/linearLayoutSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
+        
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
+            
+                <Button
+                    android:id="@+id/ButtonSize"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_textview"
+                    android:text="Size"
+                    android:textAllCaps="false"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            
+                <RadioGroup
+                    android:id="@+id/radioGroupSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ButtonSize">
+                
+                    <RadioButton
+                        android:checked="true"
+                        android:id="@+id/radioButtonLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Large"
+                        tools:layout_editor_absoluteX="34dp"
+                        tools:layout_editor_absoluteY="302dp" />
+                
+                    <RadioButton
+                        android:id="@+id/radioButtonMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Medium"
+                        tools:layout_editor_absoluteX="34dp"
+                        tools:layout_editor_absoluteY="302dp" />
+                </RadioGroup>
+            </LinearLayout>
+        
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:orientation="vertical">
+            
+                <Button
+                    android:id="@+id/ButtonTortilla"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_textview"
+                    android:text="Tortilla"
+                    android:textAllCaps="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            
+                <RadioGroup
+                    android:id="@+id/radioGroupTortilla"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="@+id/ButtonTortilla"
+                    app:layout_constraintTop_toBottomOf="@+id/ButtonTortilla">
+                
+                    <RadioButton
+                        android:checked="true"
+                        android:id="@+id/radioButtonCorn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Corn"
+                        tools:layout_editor_absoluteX="34dp"
+                        tools:layout_editor_absoluteY="302dp" />
+                
+                    <RadioButton
+                        android:id="@+id/radioButtonFlour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Flour"
+                        tools:layout_editor_absoluteX="34dp"
+                        tools:layout_editor_absoluteY="302dp" />
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/linearLayoutFilling"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutSize">
+            
+            <Button
+                android:id="@+id/buttonFillings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_textview"
+                android:text="Fillings"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+            
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                
+                <LinearLayout
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+                    
+                    <CheckBox
+                        android:checked="true"
+                        android:id="@+id/checkBoxBeef"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        
+                        android:text="Beef" />
+                    
+                    <CheckBox
+                        android:id="@+id/checkBoxChicken"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chicken" />
+                    
+                    <CheckBox
+                        android:id="@+id/checkBoxWhiteFish"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="White Fish" />
+                    
+                    <CheckBox
+                        android:id="@+id/checkBoxCheese"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cheese" />
+                    
+                    <CheckBox
+                        android:id="@+id/checkBoxSeaFood"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sea Food" />
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+                    
+                    <CheckBox
+                        android:id="@+id/checkBoxRice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rice" />
+                    
+                    <CheckBox
+                        android:id="@+id/checkBoxBeans"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Beans" />
+                    
+                    <CheckBox
+                        android:id="@+id/checkBoxPico"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pico de Gallo" />
+                    
+                    <CheckBox
+                        android:id="@+id/checkBoxGuacamole"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Guacamole" />
+                    
+                    <CheckBox
+                        android:id="@+id/checkBoxLBT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        
+                        android:text="LBT" />
+                </LinearLayout>
+            </LinearLayout>
+        
+        
+        </LinearLayout>
+    
+        <LinearLayout
+            android:id="@+id/linearLayoutBeverages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutFilling">
+        
+            <Button
+                android:id="@+id/buttonBeverage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_textview"
+                android:text="Beverages"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+        
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            
+                <LinearLayout
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+                
+                    <CheckBox
+                        android:checked="true"
+                        android:id="@+id/checkBoxSoda"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Soda" />
+                
+                    <CheckBox
+                        android:id="@+id/checkBoxCerveza"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cerveza" />
+                </LinearLayout>
+            
+                <LinearLayout
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+                
+                    <CheckBox
+                        android:id="@+id/checkBoxMargarita"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Margarita" />
+                
+                    <CheckBox
+                        android:id="@+id/checkBoxTequila"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tequila" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    
+        <LinearLayout
+            android:id="@+id/linearLayoutThongTin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutBeverages">
+        
+            <EditText
+                android:id="@+id/editTextHoTen"
+                android:hint="Họ và tên"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/editTextDiachi"
+                android:hint="Địa chỉ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+    
+        </LinearLayout>
+        <Button
+            android:id="@+id/buttonOrder"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginVertical="20dp"
+            android:background="@color/colorAccent"
+            android:text="Place Your Order"
+            android:textColor="#fff"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutThongTin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
